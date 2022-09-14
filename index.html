@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Desafio #</title>
+
+        <!-- Normalize css -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Font Awesome Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <div class="main-container">
+            <nav class="nav">
+                <img src="https://placedog.net/60/60" alt="" class="logo" />
+                <i class="fas fa-bars nav-toggle"></i>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Catálogo</li>
+                    <li>Ofertas</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+            <div class="filter">
+                <form action="">
+                    <label for="price">Ordenar por:</label>
+                    <br>
+                    <select name="price" id="price">
+                        <option value="precio">Precio</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="main">
+                <div class="products">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <img src="https://placedog.net/400/400" alt="" />
+                        <p>Modelo: aaaa</p>
+                        <button>Ver más</button>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="pages">
+                    <button>«</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>»</button>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footer__icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <p>Todos los derechos reservados</p>
+            </footer>
+        </div>
+    </body>
+</html>
