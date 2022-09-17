@@ -1,3 +1,9 @@
+:root {
+    --primary: #477afa;
+    --secondary: #000;
+    --grey: #f2f2f2;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +20,6 @@ body {
         "filter filter"
         "main main"
         "footer footer";
-    gap: 1rem;
 }
 
 .nav {
@@ -23,7 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1.2rem;
-    background: #ddd;
+    border: 2px solid var(--grey);
 }
 
 .nav img {
@@ -32,6 +37,8 @@ body {
 
 .nav i {
     font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary);
 }
 
 .nav ul {
@@ -43,7 +50,9 @@ body {
 }
 
 .nav li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: 600;
 }
 
 .filter {
@@ -61,7 +70,7 @@ body {
 
 .filter select {
     width: 90%;
-    margin-top: 1rem;
+    margin: 1rem 0;
     height: 2rem;
 }
 
@@ -71,6 +80,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    background: var(--grey);
 }
 
 .products {
@@ -82,10 +92,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 2rem;
-    background: #d4d4d4;
-    margin: 2rem;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 8%;
+    background: #fff;
+    margin: 5%;
+    border-radius: 12px;
+}
+
+.card p {
+    font-weight: 600;
+}
+
+.card:hover {
+    border: 1px solid var(--primary);
 }
 
 .card img {
@@ -94,10 +114,28 @@ body {
 
 .card button {
     width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    background: #fff;
+}
+
+.card button:hover {
+    background: var(--primary);
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.card:nth-child(n + 2) {
+    display: none;
 }
 
 .pages {
     display: flex;
+    margin-bottom: 1rem;
 }
 
 .pages button {
@@ -119,14 +157,47 @@ body {
 
 .footer i {
     font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary);
 }
 
+/* tablet */
 @media (min-width: 576px) and (max-width: 991px) {
-    /* tablet */
+    .main-container {
+        grid-template-areas:
+            "nav nav"
+            "filter main"
+            "footer footer";
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav li {
+        margin: 0 1rem;
+    }
+
+    .nav ul {
+        display: flex;
+    }
+
+    .filter {
+        width: 20vw;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card:nth-child(n + 2) {
+        display: flex;
+    }
 }
 
-@media (min-width: 992px) {
     /* desktop */
+@media (min-width: 992px) {
+
     .nav-toggle {
         display: none;
     }
@@ -150,5 +221,8 @@ body {
     }
     .products {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .card:nth-child(n + 2) {
+        display: flex;
     }
 }
